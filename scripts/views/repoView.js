@@ -9,9 +9,10 @@
       reposObj.withTheAttribute('name')
       .map(repoCompiler)
     );
-    $('#about .followers').empty().append(
-       reposObj.followers.map(followersCompiler)
-     );
+    $('#about .followers').empty();
+    if(reposObj.followers ){
+      $('#about .followers').append(reposObj.followers.map(followersCompiler));
+    }
   };
   reposObj.requestRepos(repoView.renderRepos);
 
