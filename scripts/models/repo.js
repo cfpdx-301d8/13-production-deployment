@@ -9,7 +9,7 @@
     $.ajax('https://api.github.com/users/MartinPelayo/repos',{
       method: 'GET',
       headers: {
-        Authorization: 'token ' + process.env.AUTH_TOKEN 
+        Authorization: 'token ' //+ process.env.AUTH_TOKEN 
       }
     })
          
