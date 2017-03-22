@@ -3,20 +3,9 @@
 
   reposObj.allRepos = [];
 
-
-
   reposObj.requestRepos = function(callback) {
-    $.ajax('https://api.github.com/users/MartinPelayo/repos',{
-      method: 'GET',
-      headers: {
-        Authorization: 'token ' //+ process.env.AUTH_TOKEN 
-      }
-    })
-         
-         
-         
-         
-         
+    $.get('/github/users/codefellows-portland-301d7/repos' +
+          '?per_page=10&sort=updated')
           .done(function(data) {
             reposObj.allRepos = data;
           }).done(callback);
