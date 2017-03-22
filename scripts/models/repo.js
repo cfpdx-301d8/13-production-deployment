@@ -4,7 +4,7 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.get('/' +
+    $.get('/github/users/codefellows-portland-301d7/repos' +
           '?per_page=10&sort=updated')
           .done(function(data) {
             reposObj.allRepos = data;
